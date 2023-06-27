@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import '../style/shoppingCart.css'
 import { AiFillCloseCircle } from 'react-icons/ai'
@@ -26,7 +25,6 @@ export default function ShoppingCart( {
     <div className='cart-products'>{products.length === 0 && (<span className='empty-text'>Your Cart is currently empty</span>) }
       {products.map(product => (
         <div className='cart-product' key={product.id}>
-        <Image src={product.image} alt='pics' width={100} height={100}/>
         <div className='product-info'><h1>Product info: {product.name}</h1>
         <span>{product.price * product.count}$ </span>
         </div>

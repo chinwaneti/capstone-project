@@ -1,0 +1,74 @@
+[
+  {
+    "cca3": "great",
+    "id": 1,
+    "box": "25% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Apples",
+    "image": "https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?s=612x612&w=0&k=20&c=Kx9jNvEET5ERr7oHNFMxroTc54K1Ngk7R1BW9ICX2PU=",
+    "price": 2.99
+  },
+  {
+    "cca3": "koby",
+    "id": 2,
+    "box": "20% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Oranges",
+    "image": "https://media.istockphoto.com/id/1227301369/photo/whole-cross-section-and-quarter-of-fresh-organic-navel-orange-with-leaves-in-perfect-shape-on.webp?b=1&s=170667a&w=0&k=20&c=uimgulwrNTf72rAbIOdLvObEgsJSZoCqWm9Qxojjl7Q=",
+    "price": 3.99
+  },
+  {
+    "cca3": "kiama",
+    "id": 3,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Pineapple",
+    "image": "https://media.istockphoto.com/id/838351280/photo/pineapple-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=rkdglo6nP-KNSug9iw_tCTwhgXknL-HdqR2jrY1jpo0=",
+    "price": 2.99
+  },
+  {
+    "cca3": "kamso",
+    "id": 4,
+    "box": "10% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Water",
+    "image": "https://media.istockphoto.com/id/836357552/photo/plastic-water-bottle-isolated.jpg?s=612x612&w=0&k=20&c=GKxfFlQmGQNfeay-XvExt8tJkCvXuuzBvXcshdraAD0=",
+    "price": 2.99
+  },
+  {
+    "cca3": "ife",
+    "id": 5,
+    "box": "25% 0ff",
+    "icon": "ADD TO CART",
+    "name": "oreo",
+    "image": "https://media.istockphoto.com/id/1428448569/photo/chocolate-cookies-with-cream.jpg?s=612x612&w=0&k=20&c=uY-G06AIHfqM3kx6btYLL4IKeM_vBIoW9j6BLCLbSuQ=",
+    "price": 2.99
+  },
+  {
+    "cca3": "amanda",
+    "id": 6,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Pasta",
+    "image": "https://media.istockphoto.com/id/184120573/photo/spaghetti-with-pesto-sauce.jpg?s=612x612&w=0&k=20&c=stj854S-i-VAU09RXsGdYZjYyTriqGEPdR66REEUjsE=",
+    "price": 2.99
+  },
+  {
+    "cca3": "munachi",
+    "id": 7,
+    "box": "12% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Tomatoes",
+    "image": "https://media.istockphoto.com/id/1258142863/photo/tomatoes-isolate-on-white-background-tomato-half-isolated-tomatoes-side-view-whole-cut-slice.jpg?s=612x612&w=0&k=20&c=LXNZwfkHS3LfKvOxUpzFf1iawID63DVYEjeM7fMK-Xk=",
+    "price": 2.99
+  },
+  {
+    "cca3": "muna",
+    "id": 8,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Chocolate Ice-Cream",
+    "image": "https://media.istockphoto.com/id/140474543/photo/minty-treat.jpg?s=612x612&w=0&k=20&c=8rIxhKBPz4BRpPemLO_5F8MiCbLGSuKgtU-z4Oe84eg=",
+    "price": 2.99
+  }
+]

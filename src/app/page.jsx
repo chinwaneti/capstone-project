@@ -24,7 +24,9 @@ import { BsExclamationCircle } from 'react-icons/bs'
 import {BsSearch} from 'react-icons/bs'
 import pic from "./images/mine.png"
 import Wishlist from './components/Wishlist'
-// import Sliding from './components/Swiper'
+import Slider from './components/Slider'
+// import { newPopularItems } from './popular-items/page'
+import slides from './components/details.json'
 
 
 // const [searchValue, setSearchValue] =useState('')
@@ -76,50 +78,7 @@ const data1 = details.map(detail=>(
     
     </section>
 ))
-const extra = [
-    {
-        id:1,
-        box:   '25% 0ff',
-        icon: <BsFillSuitHeartFill size={30}  style={{color:'red'}}/>,
-        name: "Apples",
-        image: "https://media.istockphoto.com/id/1365099869/photo/six-apples.jpg?s=612x612&w=0&k=20&c=Kx9jNvEET5ERr7oHNFMxroTc54K1Ngk7R1BW9ICX2PU=",
-        price: 2.99,
-        icons:  <LuPlus size={30} style={{color: 'white'}}   className='bg-green-700  rounded-l-3xl'/>
-
-
-    }
-    ,
-    {
-        id:2,
-        box:   '20% 0ff',
-        icon: <BsFillSuitHeartFill size={30}  style={{color:'red'}}/>,
-        name: "Oranges",
-        image: "https://media.istockphoto.com/id/1227301369/photo/whole-cross-section-and-quarter-of-fresh-organic-navel-orange-with-leaves-in-perfect-shape-on.webp?b=1&s=170667a&w=0&k=20&c=uimgulwrNTf72rAbIOdLvObEgsJSZoCqWm9Qxojjl7Q=",
-        price:  3.99,
-        line:  <HiOutlineMinus size={100} style={{color: 'grey'}}/>,
-        icons:  <LuPlus size={30} style={{color: 'white'}}  className='bg-green-700 rounded-l-3xl'/>
-        
-
-    },
-        {
-            id:3,
-            box:   '15% 0ff',
-            icon: <BsFillSuitHeartFill size={30} style={{color:'red'}}/>,
-            name: "Pineapples",
-            image: "https://media.istockphoto.com/id/838351280/photo/pineapple-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=rkdglo6nP-KNSug9iw_tCTwhgXknL-HdqR2jrY1jpo0=",
-            price: 2.99,
-            icons:  <LuPlus size={30} style={{color: 'white'}} className='bg-green-700 rounded-l-3xl'/>
-
-        }
-    ]
-     const list = extra.map(ex=>(
-        <section key={ex.id} className='bg-gray-100  rounded-lg h-64 w-4/5 p-0 mx-auto'>
-        <Link href='/wishlist'><div className='flex justify-between font-bold w-40'> {ex.box} {ex.icon}</div></Link>
-        <Image src={ex.image} alt='pics' width={150} height={80} className='mx-auto hover:shadow-xl rounded-lg hover:shadow-black mt-3'/>
-        <Link href='/cart'><div className='font-bold mt-7 text-black  flex justify-between'> {ex.name} {ex.icons}</div></Link>
-         <div className='text-green-700'>${ex.price}<span className='text-black'> /kg  </span></div>
-        </section>
-     ))
+    
 
 
 export default function page() {
@@ -188,11 +147,12 @@ export default function page() {
      </div>
      </div>
      <div className=''><ul className='flex space-x-[65%] mt-8'><li className='font-bold ml-3'>Popular Items</li>
-     <Link href='/'><li className='text-green-700'>See all</li></Link>
+     <Link href='/popular-items'><li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div className='grid grid-cols-3 gap-2'>
-        {list}
-     </div>
+    
+        </div>
+       <div><Slider slides={slides}/></div> 
      <div className='container mt-5 text-light'>
      </div>
      <div>
