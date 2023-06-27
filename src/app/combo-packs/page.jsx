@@ -1,12 +1,18 @@
+'use client'
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {IoIosArrowBack} from 'react-icons/io'
 import { GrFavorite } from 'react-icons/gr'
+import {ShoppingCart} from '../components/ShoppingCart'
+import '../style/main.css'
 
 
 
-const details = [
+
+
+const products = [
   {
     "id":   1,
     "name": "fruit Combo basket",
@@ -72,18 +78,23 @@ const details = [
 
     
   }]
- const data = details.map(detail=>(
-    <section key={detail.id} className="rounded-lg bg-gray-100 p-5  shadow-black">
-    <div className="ml-[90%]">{detail.icon}</div>
-    <div><Image src={detail.image} alt="new" width={200} height={200} title={`Grab AWOOF ${detail.name}`} className="hover:shadow-xl hover:shadow-black "/></div>
-    <div>{detail.name}</div>
-    <div>{detail.price}</div>
-    <div>{detail.cart}</div>
-    </section>
- ))
+ 
 
 
 export default function page() {
+  const [cartVisibility, setCartVisible] = useState(false);
+  const [productsInCart, setProducts] =useState ([])
+
+
+  const data = products.map(product=>(
+    <section key={product.id} className="rounded-lg bg-gray-100 p-5 shadow-black">
+    <div className="ml-[90%]">{product.icon}</div>
+    <div><Image src={product.image} alt="new" width={200} height={200} title={`Grab AWOOF ${product.name}`} className="hover:shadow-xl hover:shadow-black "/></div>
+    <div>{product.name}</div>
+    <div>{product.price}</div>
+    <div className="" onClick={() => setCartVisible (true)}>{product.cart}</div>
+    </section>
+ ))
   return (
     <div className="bg-grey-50">
     <div className='flex space-x-60'>
@@ -91,6 +102,10 @@ export default function page() {
     <h2 className='font-bold'>Combo Deals</h2>
     </div>
     <div className="grid grid-cols-2 gap-3"> {data}</div>
+    <div><ShoppingCart visibility={cartVisibility}
+    products ={productsInCart}/>
+    
+    </div>
     </div>
   )
 }

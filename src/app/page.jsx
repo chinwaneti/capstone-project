@@ -12,19 +12,29 @@ import {LuLogOut} from 'react-icons/lu'
 import { BsCardChecklist } from 'react-icons/bs'
 import { TfiWallet } from 'react-icons/tfi'
 import { BsPerson } from 'react-icons/bs'
-import {MdOutlineLocalOffer} from 'react-icons/md'
-import {AiOutlineHistory} from 'react-icons/ai'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { AiOutlineHome } from 'react-icons/ai'
+import {MdOutlineLocalOffer} from 'react-icons/md'
 import { AiOutlineClose } from 'react-icons/ai'
 import {IoIosPeople} from 'react-icons/io'
 import {BiPhoneCall} from "react-icons/bi"
 import { BiHelpCircle } from 'react-icons/bi'
-import { GrFavorite } from 'react-icons/gr'
 import {FcRatings} from 'react-icons/fc'
 import { BsExclamationCircle } from 'react-icons/bs'
 import {BsSearch} from 'react-icons/bs'
 import pic from "./images/mine.png"
+import Wishlist from './components/Wishlist'
+// import Sliding from './components/Swiper'
+
+
+// const [searchValue, setSearchValue] =useState('')
+// const [filterResult, setFilterResult] = useState([])
+
+// const text = (e) => {
+//     setSearchValue(e)
+
+//     if(searchValue !== '') {const filterData = details.filter{return object.values(item) => item.name == searchValue)}
+// }
 
 
 const details = [
@@ -60,7 +70,7 @@ const details = [
 
 
 const data1 = details.map(detail=>(
-    <section key={detail.id} className='bg-gray-200 rounded-lg h-32 hover:shadow-xl hover:shadow-black w-4/5 p-0 mx-auto '>
+    <section key={detail.id} className='bg-white rounded-lg h-32 hover:shadow-xl hover:shadow-black w-4/5 p-0 mx-auto '>
    <div> <Image src={detail.image} alt='pics' width={110} height={100} className='mx-auto mt-6'/>
     </div>
     
@@ -103,24 +113,21 @@ const extra = [
         }
     ]
      const list = extra.map(ex=>(
-        <section key={ex.id} className='bg-gray-100 hover:shadow-xl hover:shadow-black rounded-lg h-64 w-4/5 p-0 mx-auto'>
+        <section key={ex.id} className='bg-gray-100  rounded-lg h-64 w-4/5 p-0 mx-auto'>
         <Link href='/wishlist'><div className='flex justify-between font-bold w-40'> {ex.box} {ex.icon}</div></Link>
-        <Image src={ex.image} alt='pics' width={150} height={80} className='mx-auto mt-3'/>
+        <Image src={ex.image} alt='pics' width={150} height={80} className='mx-auto hover:shadow-xl rounded-lg hover:shadow-black mt-3'/>
         <Link href='/cart'><div className='font-bold mt-7 text-black  flex justify-between'> {ex.name} {ex.icons}</div></Link>
          <div className='text-green-700'>${ex.price}<span className='text-black'> /kg  </span></div>
         </section>
      ))
 
 
-
-
-
 export default function page() {
   const [Nav, setNav] = useState(false)
   const [profile, setProfile] = useState(false)
+
   return (
-    
-    <div className='border-solid rounded-lg mb-10 bg-gray-50 top-0'>
+    <div className='border-solid border-2 border-gray-100 rounded-lg mb-10 bg-gray-100 top-0'>
     <div className='flex justify-between items-center h-full w-[50%] px-4'>
     <div onClick={() => setNav ((prev) => !prev)}> 
     <RxHamburgerMenu size={30}/></div></div>
@@ -131,12 +138,12 @@ export default function page() {
             <div onClick={() => setNav ((prev) => !prev)}> <AiOutlineClose /></div>
         </div>
         
-        <div className='flex flex-col py-2 text-white '>
+        <div className='flex flex-col gap-4 py-2 text-white '>
         <ul>
         <li> <Image src={pic} alt='mine' width={100} className='rounded-full border-2 hover:border-4'/></li>
         <li onClick={() => setNav(false)}  className='py-2'>Welcome Chidinma!</li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsCardChecklist />Your Last Choice</li>
-        <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions  </li>
+        <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions {} </li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><IoIosPeople />Refer & earn</li>
        <Link href='/contact-us'> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiHelpCircle />Help Center</li>
@@ -180,21 +187,24 @@ export default function page() {
      </div>
      </div>
      </div>
-     <div className=''><ul className='flex space-x-[65%] mt-8 mb-2'><li className='font-bold ml-3'>Popular Items</li>
+     <div className=''><ul className='flex space-x-[65%] mt-8'><li className='font-bold ml-3'>Popular Items</li>
      <Link href='/'><li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div className='grid grid-cols-3 gap-2'>
         {list}
      </div>
+     <div className='container mt-5 text-light'>
+     </div>
      <div>
-        <footer className='flex space-x-20 p-7'>
-            <Link href='/'><div className='hover:text-green-500'><AiOutlineHome /><div className=''>Home</div></div></Link>
-            <Link href='/wishlist'><div className='hover:text-green-500'><GrFavorite /> <div className=''>Wishlist</div> </div></Link>
-            <Link href='/'><div className='hover:text-green-500'><AiOutlineShoppingCart /><div className=''>Cart</div></div></Link>
-            <Link href='/add-money'><div className='hover:text-green-500'><TfiWallet /><div className=''>Wallet</div></div></Link>
+     <div>
+        <div className=' flex space-x-20 h-20 rounded-3xl p-5 bg-green-500 hover:border-4 text-black hover:text-white mb-5'>
+            <Link href='/'><div className=''><AiOutlineHome /><div className=''>Home</div></div></Link>
+            <div className=''><Wishlist className=''/> <div className=''>Wishlist</div> </div>
+            <Link href=''><div className=''><AiOutlineShoppingCart /><div className=''>Cart</div></div></Link>
+            <Link href='/add-money'><div className=''><TfiWallet /><div className=''>Wallet</div></div></Link>
             <div className='flex justify-between items-center h-full w-[50%] px-4'>
             <div onClick={() => setProfile ((prev) => !prev)}> 
-            <div className='hover:text-green-500'> <BsPerson size={20}/><p>Profile </p> </div>
+            <BsPerson size={20} className=''/><p className=''>Profile </p>
     <div className={
         profile ? "fixed left-7 top-20 w-[40%] h-[70vh] bg-gray-100 p-10 " 
         :  "fixed  left-[-100%] top-100 p-0 ease-in duration-500"
@@ -220,8 +230,8 @@ export default function page() {
         </div>
         </div>
         </div>
-        </footer>
-    </div>
+        </div>
+    </div></div>
     </div>
 
     
