@@ -4,17 +4,22 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 
 
 
 export default function Slider({slides}) {
     return (
       <Swiper
-      modules={[Navigation, Pagination, A11y]}
+      modules={[ Pagination, Autoplay]}
       spaceBetween={50}
       slidesPerView={3}
-      navigation
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSlideChange={() => console.log('slide change')}

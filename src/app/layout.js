@@ -1,3 +1,4 @@
+import Search from './components/Search'
 import { StoreProvider } from './components/Store'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='max-w-[640px]'>
-      {children}
+       {children}
       </body>
     </html>
   )

@@ -1,13 +1,13 @@
 
 "use client"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {BsFillSuitHeartFill} from 'react-icons/bs'
 import {HiOutlineMinus} from 'react-icons/hi'
-import {LuPlus} from 'react-icons/lu'
+import { LuSettings2} from 'react-icons/lu'
 import {LuLogOut} from 'react-icons/lu'
 import { BsCardChecklist } from 'react-icons/bs'
 import { TfiWallet } from 'react-icons/tfi'
@@ -25,18 +25,8 @@ import {BsSearch} from 'react-icons/bs'
 import pic from "./images/mine.png"
 import Wishlist from './components/Wishlist'
 import Slider from './components/Slider'
-// import { newPopularItems } from './popular-items/page'
 import slides from './components/details.json'
 
-
-// const [searchValue, setSearchValue] =useState('')
-// const [filterResult, setFilterResult] = useState([])
-
-// const text = (e) => {
-//     setSearchValue(e)
-
-//     if(searchValue !== '') {const filterData = details.filter{return object.values(item) => item.name == searchValue)}
-// }
 
 
 const details = [
@@ -71,6 +61,7 @@ const details = [
 
 
 
+
 const data1 = details.map(detail=>(
     <section key={detail.id} className='bg-white rounded-lg h-32 hover:shadow-xl hover:shadow-black w-4/5 p-0 mx-auto '>
    <div> <Image src={detail.image} alt='pics' width={110} height={100} className='mx-auto mt-6'/>
@@ -82,22 +73,57 @@ const data1 = details.map(detail=>(
 
 
 export default function page() {
-  const [Nav, setNav] = useState(false)
-  const [profile, setProfile] = useState(false)
+    const [searchValue, setSearchValue] = useState('');
+    const [filteredResult, setFilterResult] = useState([])
+    const [Nav, setNav] = useState(false)
+    const [search, setSearch] = useState(false)
+
+    
+    const text = (e) => {
+        setSearchValue(e)
+        console.log(searchValue);
+    
+        if(searchValue !== '') {
+            const filteredData = slides.filter((item) => {
+            return  Object.values(item)
+            .join('').toLowerCase().includes(searchValue.toLowerCase());
+            });
+            console.log(filteredData);
+            setFilterResult(filteredData);
+    }
+
+    }
+
+    
+    
+    const myData = filteredResult.map(data => (
+        <section key={data.id} className='flex justify-between p-4 '>
+        <div>{data.name}</div>
+        <div className=''><Image src={data.image} width={100} height={100}/></div>
+        
+        </section>
+    ))
+
+    useEffect(() => {
+        searchValue === '' ? setFilterResult ([]) : myData
+    })
+
 
   return (
     <div className='border-solid border-2 border-gray-100 rounded-lg mb-10 bg-gray-100 top-0'>
-    <div className='flex justify-between items-center h-full w-[50%] px-4'>
+    <div className='flex justify-between items-center py-4 h-full w-[50%] px-4'>
     <div onClick={() => setNav ((prev) => !prev)}> 
-    <RxHamburgerMenu size={30}/></div></div>
+    <RxHamburgerMenu size={30}/></div> 
+    <Link href= '/add-to-cart'><AiOutlineShoppingCart size={30} className=' ml-[1000%]'/></Link><div></div>
+    </div>
     <div className={
-        Nav ? "fixed left-0 top-0 w-[30%] h-screen bg-green-500 p-10 ease-in duration-1000" 
-        :  "fixed  left-[-100%] top-100 p-0 ease-in duration-500  overflow-scroll"  }>
-        <div className='flex  justify-end'>
+        Nav ? "fixed left-0 top-0 w-[30%] h-[70%] z-50 bg-green-500 overscroll-auto p-10 ease-in duration-1000" 
+        :  "fixed  left-[-100%] top-100 p-0 ease-in duration-500  "  }>
+        <div className='flex  overscroll-auto justify-end'>
             <div onClick={() => setNav ((prev) => !prev)}> <AiOutlineClose /></div>
         </div>
         
-        <div className='flex flex-col gap-4 py-2 text-white '>
+        <div className='flex flex-col gap-4 overflow-auto  py-2 text-white '>
         <ul>
         <li> <Image src={pic} alt='mine' width={100} className='rounded-full border-2 hover:border-4'/></li>
         <li onClick={() => setNav(false)}  className='py-2'>Welcome Chidinma!</li>
@@ -111,15 +137,51 @@ export default function page() {
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><LuLogOut />Logout</li>
         </ul>
         </div>
-        
       </div>
     
    
    
     <h2 className='text-center'>Location</h2>
-    <h2 className='text-center'>New York, USA <select name="cap" id="cap"></select></h2>
-    <div className='' > <BsSearch /> <input  type="text" name='cap' id='cap'  placeholder='Search food, drinks etc'  className='bg-gray-50  border-2 ml-4 rounded-r-lg w-[95%] border-solid ' /></div>
-    <div className=''><ul className='flex space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
+    <h2 className='text-center'>New York, USA 
+     <select name="cap" id="cap">
+    <option value="a">Select</option>
+    <option value="a">Texas</option>
+    <option value="b">Ohio</option>
+    <option value="c">Alaska</option>
+    <option value="d">California</option>
+    <option value="e">Florida</option>
+    <option value="f">Georgia</option>
+    </select></h2>
+    
+    
+    <div className='flex justify-between py-3 px-6  border-b'onClick={() => setSearch ((prev) => !prev)} >
+    <form action="" className='w-full '>
+    <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
+    <BsSearch size={20} className='w-5 h-5 absolute ml-3 pointer-events-none'/>
+    <LuSettings2 size={20} style={{color: 'white'}} className='w-8 h-9 absolute ml-[94%] rounded-r-lg border-r-green-600  bg-green-600 pointer-events-none'/>
+    <input  type="search" 
+     name='cap' 
+     autoComplete='off'
+     aria-label='Search food, drinks etc'
+      placeholder=' Search food, drinks etc'
+       className='pr-3 pl-10 py-2 font-semibold  placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full' 
+
+        onChange={(e)=> text(e.target.value)} />
+        </div> 
+        </form>
+        </div>
+        <Link href='/popular-items'><div className='bg-green-500 z-50 ml-6  border-2 w-[90%] rounded-xl hover:text-green-600'>
+        {searchValue.length > 1 ? (
+            filteredResult.length != 0 ? (myData) : (
+                <div><p> Oops! Item not Found</p></div>
+            ) 
+        ) : <div className='hidden'>null</div>  }
+        </div></Link>
+        
+   
+   
+   
+       <div className=''><ul className='flex space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
     <Link href='/categories'><li className='text-green-700'>See all</li></Link> 
      </ul></div>
     <div className='grid grid-cols-4 gap-2'>
@@ -163,35 +225,12 @@ export default function page() {
             <Link href=''><div className=''><AiOutlineShoppingCart /><div className=''>Cart</div></div></Link>
             <Link href='/add-money'><div className=''><TfiWallet /><div className=''>Wallet</div></div></Link>
             <div className='flex justify-between items-center h-full w-[50%] px-4'>
-            <div onClick={() => setProfile ((prev) => !prev)}> 
-            <BsPerson size={20} className=''/><p className=''>Profile </p>
-    <div className={
-        profile ? "fixed left-7 top-20 w-[40%] h-[70vh] bg-gray-100 p-10 " 
-        :  "fixed  left-[-100%] top-100 p-0 ease-in duration-500"
-    }>
-        <div className='flex justify-end'>
-        <div onClick={() => setProfile ((prev) => !prev)}>
-        <AiOutlineClose /> </div></div>
-        <div>
-        <h1  className='font-bold text-xl'>Login</h1>
-        <p className='mt-3'>Get  Access To Your Orders</p>
-        <div>
-        <div onClick={() => setProfile(false)}><input type='email' placeholder='Enter Username/Email' className='border-2 rounded-lg h-10 w-full'/></div>
-        <div onClick={() => setProfile(false)}><input type='password' placeholder='Enter Password' className='border-2 rounded-lg h-10 w-full mt-5'/></div>
-        <div >
-        <div onClick={() => setProfile(false)}><input type="checkbox" id='Rem' />
-        <label id="Rem">Remember Me</label></div>
-        <p className='text-right'>Lost your Password?</p>
-        </div>
-        <div onClick={() => setProfile(false)} className='border-2 cursor-pointer rounded-lg h-10 mt-5'><p className='text-center py-3'>NEW TO FOODIE? SIGN UP</p></div>
-        <div onClick={() => setProfile(false)} className='border-2  cursor-pointer rounded-lg h-10 mt-5 bg-green-500'><p className='text-center py-3'>LOG IN</p></div>
+           <Link href='/my-account'><BsPerson size={20} className=''/><p className=''>Profile </p></Link> 
+    
         </div>
         </div>
         </div>
-        </div>
-        </div>
-        </div>
-    </div></div>
+    </div>
     </div>
 
     

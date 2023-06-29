@@ -2,6 +2,7 @@ import React from 'react'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import '../style/shoppingCart.css'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import slides from "../components/details.json"
 
 
 

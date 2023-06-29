@@ -67,8 +67,45 @@
     "id": 8,
     "box": "15% 0ff",
     "icon": "ADD TO CART",
-    "name": "Chocolate Ice-Cream",
+    "name": "Mint chocolate chip",
     "image": "https://media.istockphoto.com/id/140474543/photo/minty-treat.jpg?s=612x612&w=0&k=20&c=8rIxhKBPz4BRpPemLO_5F8MiCbLGSuKgtU-z4Oe84eg=",
     "price": 2.99
-  }
+  },
+  {
+    "cca3": "arinze",
+    "id": 9,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Vanilla", 
+    "image": "https://media.istockphoto.com/id/482538099/photo/ice-cream-ball.jpg?s=612x612&w=0&k=20&c=LLCKz7aSrZm2Ye9iJyyGYG27Pj2VJ1whBvY9xDvd2xQ=", 
+    "price": 4.99},
+
+  {
+    "cca3": "ada",
+    "id": 10,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Chocolate",
+     "image": "https://media.istockphoto.com/id/499028420/photo/chocolate-ice-cream.jpg?s=612x612&w=0&k=20&c=80HM_ZjZIUJAeyqPhfcoiux-wU1Epd1I-Y6PZh2DE14=", 
+     "price": 4.99},
+
+  {
+    "cca3": "ifenna",
+    "id": 11,
+    "box": "25% 0ff",
+    "icon": "ADD TO CART",
+    "name": "Strawberry",
+     "image": "https://media.istockphoto.com/id/184094541/photo/raspberries-and-kiwi-dessert.jpg?s=612x612&w=0&k=20&c=OldCrjQWD8UmLrLtdRUPnm-QY_DhG0e36QSbfugQ_dg=", 
+     "price": 4.99},
+
+  {
+    "cca3": "me",
+    "id": 12,
+    "box": "15% 0ff",
+    "icon": "ADD TO CART", 
+    "name": "Cookie dough",
+     "image": "https://media.istockphoto.com/id/177403797/photo/scoops-frozen-yogurt-in-glass-bowl.jpg?s=612x612&w=0&k=20&c=Wle4pa-exAjKVd0uZXrHt7Eck_DhfNjSWK-3bolA_eU=",
+      "price": 5.99}
+
+
 ]
