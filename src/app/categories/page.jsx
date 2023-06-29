@@ -6,7 +6,7 @@ import {GrNext} from 'react-icons/gr'
 import { AiOutlineHeart } from 'react-icons/ai'
 
 export let newDetails
-const cat =[
+const father =[
   { 
     'cca3': "chi",
     "id":   1,
@@ -213,9 +213,9 @@ const cat =[
   }]
   
   
-  newDetails =cat.slice()
+  newDetails =father.slice()
   export default function page() {
-  const data1 = cat.map(cart=>(
+  const data1 = father.map(cart=>(
     <section key={cart.cca3} className='h-40 w-4/5  rounded-lg  bg-white p-0 mx-auto'>
     <Link href={`/categories/${cart.cca3}`} title={`click to see more ${cart.name}`}>
     <Image src={cart.image} alt='pics' width={100} height={80} className='mx-auto mt-6'/>

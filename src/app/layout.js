@@ -1,5 +1,3 @@
-import Search from './components/Search'
-import { StoreProvider } from './components/Store'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
