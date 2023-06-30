@@ -114,7 +114,7 @@ export default function page() {
     <div className='flex justify-between items-center py-4 h-full w-[50%] px-4'>
     <div onClick={() => setNav ((prev) => !prev)}> 
     <RxHamburgerMenu size={30}/></div> 
-    <Link href= '/add-to-cart'><AiOutlineShoppingCart size={30} className=' ml-[1000%]'/></Link><div></div>
+    <Link href= ''><AiOutlineShoppingCart size={30} className=' ml-[1000%]'/></Link><div></div>
     </div>
     <div className={
         Nav ? "fixed left-0 top-0 w-[30%] h-[70%] z-50 bg-green-500 overscroll-auto p-10 ease-in duration-1000" 
@@ -130,7 +130,7 @@ export default function page() {
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsCardChecklist />Your Last Choice</li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions {} </li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><IoIosPeople />Refer & earn</li>
-       <Link href='/contact-us'> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
+       <Link href=''> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiHelpCircle />Help Center</li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><FcRatings />Rate Us</li>
         <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsExclamationCircle />About Us</li>
@@ -170,7 +170,7 @@ export default function page() {
         </div> 
         </form>
         </div>
-        <Link href='/popular-items'><div className='bg-green-500 z-50 ml-6  border-2 w-[90%] rounded-xl hover:text-green-600'>
+        <Link href=''><div className='bg-green-500 z-50 ml-6  border-2 w-[90%] rounded-xl hover:text-green-600'>
         {searchValue.length > 1 ? (
             filteredResult.length != 0 ? (myData) : (
                 <div><p> Oops! Item not Found</p></div>
@@ -182,7 +182,7 @@ export default function page() {
    
    
        <div className=''><ul className='flex space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
-    <Link href='/categories'><li className='text-green-700'>See all</li></Link> 
+    <Link href=''><li className='text-green-700'>See all</li></Link> 
      </ul></div>
     <div className='grid grid-cols-4 gap-2'>
     {data1}
@@ -193,7 +193,7 @@ export default function page() {
     <div className=''>Milk & Eggs</div>
      <div>Drinks</div></div>
      <div className=''><ul className='flex space-x-[65%] mt-8 mb-2'><li className='font-bold ml-3'>Deals</li>
-    <Link href='/combo-packs'> <li className='text-green-700'>See all</li></Link>
+    <Link href=''> <li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div>
      <div className='h-486 ml-3 bg-gray-200 rounded-lg w-[96%] p-8'>
@@ -209,7 +209,7 @@ export default function page() {
      </div>
      </div>
      <div className=''><ul className='flex space-x-[65%] mt-8'><li className='font-bold ml-3'>Popular Items</li>
-     <Link href='/popular-items'><li className='text-green-700'>See all</li></Link>
+     <Link href=''><li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div className='grid grid-cols-3 gap-2'>
     
@@ -220,12 +220,12 @@ export default function page() {
      <div>
      <div>
         <div className=' flex space-x-20 h-20 rounded-3xl p-5 bg-green-500 hover:border-4 text-black hover:text-white mb-5'>
-            <Link href='/'><div className=''><AiOutlineHome /><div className=''>Home</div></div></Link>
+            <Link href=''><div className=''><AiOutlineHome /><div className=''>Home</div></div></Link>
             <div className=''><Wishlist className=''/> <div className=''>Wishlist</div> </div>
             <Link href=''><div className=''><AiOutlineShoppingCart /><div className=''>Cart</div></div></Link>
-            <Link href='/add-money'><div className=''><TfiWallet /><div className=''>Wallet</div></div></Link>
+            <Link href=''><div className=''><TfiWallet /><div className=''>Wallet</div></div></Link>
             <div className='flex justify-between items-center h-full w-[50%] px-4'>
-           <Link href='/my-account'><BsPerson size={20} className=''/><p className=''>Profile </p></Link> 
+           <Link href=''><BsPerson size={20} className=''/><p className=''>Profile </p></Link> 
     
         </div>
         </div>

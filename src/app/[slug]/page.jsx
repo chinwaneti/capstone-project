@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { newDetails } from '../page'
+import { newDetails } from '../categories/page'
 import { IoIosArrowBack } from 'react-icons/io'
 import Link from 'next/link'
 import { AiOutlineHeart } from 'react-icons/ai'
