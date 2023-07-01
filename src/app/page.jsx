@@ -5,8 +5,6 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {RxHamburgerMenu} from 'react-icons/rx'
-import {BsFillSuitHeartFill} from 'react-icons/bs'
-import {HiOutlineMinus} from 'react-icons/hi'
 import { LuSettings2} from 'react-icons/lu'
 import {LuLogOut} from 'react-icons/lu'
 import { BsCardChecklist } from 'react-icons/bs'
@@ -73,48 +71,13 @@ const data1 = details.map(detail=>(
 
 
 export default function page() {
-    const [searchValue, setSearchValue] = useState('');
-    const [filteredResult, setFilterResult] = useState([])
     const [Nav, setNav] = useState(false)
-    const [search, setSearch] = useState(false)
-
     
-    const text = (e) => {
-        setSearchValue(e)
-        console.log(searchValue);
-    
-        if(searchValue !== '') {
-            const filteredData = slides.filter((item) => {
-            return  Object.values(item)
-            .join('').toLowerCase().includes(searchValue.toLowerCase());
-            });
-            console.log(filteredData);
-            setFilterResult(filteredData);
-    }
-
-    }
-
-    
-    
-    const myData = filteredResult.map(data => (
-        <section key={data.id} className='flex justify-between p-4 '>
-        <div>{data.name}</div>
-        <div className=''><Image src={data.image} width={100} height={100}/></div>
-        
-        </section>
-    ))
-
-    useEffect(() => {
-        searchValue === '' ? setFilterResult ([]) : myData
-    })
-
-
   return (
     <div className='border-solid border-2 border-gray-100 rounded-lg mb-10 bg-gray-100 top-0'>
     <div className='flex justify-between items-center py-4 h-full w-[50%] px-4'>
     <div onClick={() => setNav ((prev) => !prev)}> 
     <RxHamburgerMenu size={30}/></div> 
-    <Link href= ''><AiOutlineShoppingCart size={30} className=' ml-[1000%]'/></Link><div></div>
     </div>
     <div className={
         Nav ? "fixed left-0 top-0 w-[30%] h-[70%] z-50 bg-green-500 overscroll-auto p-10 ease-in duration-1000" 
@@ -154,7 +117,7 @@ export default function page() {
     </select></h2>
     
     
-    <div className='flex justify-between py-3 px-6  border-b'onClick={() => setSearch ((prev) => !prev)} >
+    <Link href='/search'><div className='flex justify-between py-3 px-6  border-b'>
     <form action="" className='w-full '>
     <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
     <BsSearch size={20} className='w-5 h-5 absolute ml-3 pointer-events-none'/>
@@ -164,26 +127,20 @@ export default function page() {
      autoComplete='off'
      aria-label='Search food, drinks etc'
       placeholder=' Search food, drinks etc'
-       className='pr-3 pl-10 py-2 font-semibold  placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full' 
+       className='pr-3 pl-10 py-2 font-semibold cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full' 
 
         onChange={(e)=> text(e.target.value)} />
         </div> 
         </form>
-        </div>
-        <Link href=''><div className='bg-green-500 z-50 ml-6  border-2 w-[90%] rounded-xl hover:text-green-600'>
-        {searchValue.length > 1 ? (
-            filteredResult.length != 0 ? (myData) : (
-                <div><p> Oops! Item not Found</p></div>
-            ) 
-        ) : <div className='hidden'>null</div>  }
         </div></Link>
+
         
    
    
    
        <div className=''><ul className='flex space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
-    <Link href=''><li className='text-green-700'>See all</li></Link> 
-     </ul></div>
+        <Link href='/newCategories'><li className='to-green-700'>See all</li></Link>
+       </ul></div>
     <div className='grid grid-cols-4 gap-2'>
     {data1}
     </div>
@@ -193,7 +150,7 @@ export default function page() {
     <div className=''>Milk & Eggs</div>
      <div>Drinks</div></div>
      <div className=''><ul className='flex space-x-[65%] mt-8 mb-2'><li className='font-bold ml-3'>Deals</li>
-    <Link href=''> <li className='text-green-700'>See all</li></Link>
+    <Link href='/combo-packs'> <li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div>
      <div className='h-486 ml-3 bg-gray-200 rounded-lg w-[96%] p-8'>
@@ -209,7 +166,7 @@ export default function page() {
      </div>
      </div>
      <div className=''><ul className='flex space-x-[65%] mt-8'><li className='font-bold ml-3'>Popular Items</li>
-     <Link href=''><li className='text-green-700'>See all</li></Link>
+     <Link href='/popular-items'><li className='text-green-700'>See all</li></Link>
      </ul></div>
      <div className='grid grid-cols-3 gap-2'>
     

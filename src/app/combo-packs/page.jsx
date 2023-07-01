@@ -1,12 +1,10 @@
 'use client'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {IoIosArrowBack} from 'react-icons/io'
 import { GrFavorite } from 'react-icons/gr'
-import {ShoppingCart} from '../components/ShoppingCart'
-import '../style/main.css'
 
 
 
@@ -18,7 +16,7 @@ const products = [
     "name": "fruit Combo basket",
     "image": "https://media.istockphoto.com/id/1473867574/photo/online-buying-and-delivery-red-shopping-basket-with-fresh-food.jpg?s=612x612&w=0&k=20&c=1k2OwkB47ZA3n3D-u_kx2yeo61vvtzMjt0MwvEkLzZA=",
     "price": 50,
-    'cart' : <Link href='/cart'><AiOutlineShoppingCart /></Link>,
+    'cart' : <Link href='/Cart'><AiOutlineShoppingCart /></Link>,
     icon: <Link href='/wishlist'><GrFavorite size={20}  style={{color: ''}}/></Link>,
 
 
@@ -29,7 +27,7 @@ const products = [
     "name": "Vegetable Combo Basket",
     "image": 'https://media.istockphoto.com/id/186697750/photo/shopping-basket-with-food.jpg?s=612x612&w=0&k=20&c=dj6-B3jISW3p3V2OhH7MaFIz9v0qCBZvD4a6PzGrBR4=',
     "price": 200,
-    'cart' : <Link href='/cart'><AiOutlineShoppingCart /></Link>,
+    'cart' : <Link href='/Cart'><AiOutlineShoppingCart /></Link>,
     icon: <Link href='/wishlist'><GrFavorite size={20}  style={{color: ''}}/></Link>,
 
 
@@ -83,8 +81,9 @@ const products = [
 
 export default function page() {
   const [cartVisibility, setCartVisible] = useState(false);
-  const [productsInCart, setProducts] =useState ([])
+  const [productsInCart, setProducts] =useState()
 
+  
 
   const data = products.map(product=>(
     <section key={product.id} className="rounded-lg bg-gray-100 p-5 shadow-black">
@@ -92,7 +91,7 @@ export default function page() {
     <div><Image src={product.image} alt="new" width={200} height={200} title={`Grab AWOOF ${product.name}`} className="hover:shadow-xl hover:shadow-black "/></div>
     <div>{product.name}</div>
     <div>{product.price}</div>
-    <div className="" onClick={() => setCartVisible (true)}>{product.cart}</div>
+    <div className="">{product.cart}</div>
     </section>
  ))
   return (
@@ -106,4 +105,4 @@ export default function page() {
     
     </div>
   )
-}
+  }
