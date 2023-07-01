@@ -69,7 +69,7 @@ const data1 = details.map(detail=>(
     
 
 
-export default function Home() {
+export default function Index() {
     const [Nav, setNav] = useState(false);
     
   return (
