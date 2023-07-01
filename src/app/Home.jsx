@@ -1,7 +1,6 @@
 
 "use client"
 import { useEffect, useState } from 'react'
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {RxHamburgerMenu} from 'react-icons/rx'
@@ -70,8 +69,8 @@ const data1 = details.map(detail=>(
     
 
 
-export default function page() {
-    const [Nav, setNav] = useState(false)
+export default function Home() {
+    const [Nav, setNav] = useState(false);
     
   return (
     <div className='border-solid border-2 border-gray-100 rounded-lg mb-10 bg-gray-100 top-0'>
@@ -134,10 +133,6 @@ export default function page() {
         </form>
         </div></Link>
 
-        
-   
-   
-   
        <div className=''><ul className='flex space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
         <Link href='/newCategories'><li className='to-green-700'>See all</li></Link>
        </ul></div>
