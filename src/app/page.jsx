@@ -1,6 +1,5 @@
 
 "use client"
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {RxHamburgerMenu} from 'react-icons/rx'
@@ -23,6 +22,7 @@ import pic from "./images/mine.png"
 import Wishlist from './components/Wishlist'
 import Slider from './components/Slider'
 import slides from './components/details.json'
+import { useState } from 'react'
 
 
 
@@ -69,9 +69,9 @@ const data1 = details.map(detail=>(
     
 
 
-export default function page() {
-    const [Nav, setNav] = useState(false);
-    
+export default function Page() {
+const [Nav, setNav] = useState(false) ;
+   
   return (
     <div className='border-solid border-2 border-gray-100 rounded-lg mb-10 bg-gray-100 top-0'>
     <div className='flex justify-between items-center py-4 h-full w-[50%] px-4'>
@@ -126,9 +126,7 @@ export default function page() {
      autoComplete='off'
      aria-label='Search food, drinks etc'
       placeholder=' Search food, drinks etc'
-       className='pr-3 pl-10 py-2 font-semibold cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full' 
-
-        onChange={(e)=> text(e.target.value)} />
+       className='pr-3 pl-10 py-2 font-semibold cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full'  />
         </div> 
         </form>
         </div></Link>
