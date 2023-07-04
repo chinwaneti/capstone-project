@@ -45,13 +45,13 @@ export default function Page() {
 
   return (
     <div>
-      <div className='flex justify-between py-3 px-6 bg-gray-200 h-screen border-b'>
+      <div className='flex justify-between py-3 mb-5 px-6 bg-gray-200 h-screen border-b'>
         <Link href='/'>
           <div className='h-10 py-3'>
             <AiOutlineArrowLeft size={25} />
           </div>
         </Link>
-        <form action='' className='w-full'>
+        <form action='' className='w-full '>
           <div className='relative ml-3 flex items-center text-gray-400 focus-within:text-gray-600'>
             <BsSearch
               size={20}
@@ -63,7 +63,7 @@ export default function Page() {
               autoComplete='off'
               aria-label='Search food, drinks etc'
               placeholder='Search food, drinks etc'
-              className='pr-3 pl-10 h-10 py-2 font-semibold cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full'
+              className='pr-3 pl-10 h-10 py-2 font-semibold mb-2 cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full'
               onChange={(e) => text(e.target.value)}
             />
           </div>

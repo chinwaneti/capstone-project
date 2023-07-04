@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import {IoIosArrowBack} from 'react-icons/io'
 import { AiOutlineHeart } from 'react-icons/ai'
+import Navbar from '../components/Navbar'
 
 export let newDetails
 const father =[
@@ -222,9 +223,13 @@ const father =[
     <div className='ml-[10%] mt-3 font-bold'>{cart.name} </div>
 </Link>
     </section>))
+
+    
+    
     
   return (
-    <div className='border-solid  border-2 bg-gray-200 mt-5 '>
+    <div className='border-solid  border-2 bg-gray-200 '>
+    <div> <Navbar/> </div>
     <div className='flex space-x-60'>
     <Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
     <h2 className='font-bold'>Categories</h2>

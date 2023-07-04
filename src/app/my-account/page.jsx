@@ -13,7 +13,8 @@ import {FaLanguage} from 'react-icons/fa'
 
 export default function page() {
   return (
-    <div className='rounded-lg border-solid mt-5 bg-grey-50 '>
+    <div>
+    <div className='rounded-lg border-solid  bg-grey-50  mt-10'>
     <div className='flex space-x-60'>
     <Link href='/contact-us'><IoIosArrowBack size={30} className='bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4'/></Link>
     <h2 className='font-bold'>Account</h2>
@@ -31,6 +32,7 @@ export default function page() {
     <div className='p-5 flex space-x-5'><RiLockPasswordLine size={30} style={{color: 'green'}}className='bg-white rounded-lg'/> <p>Change Password</p></div>
     <div className='p-5 flex space-x-5'><MdPayment size={30} style={{color: 'green'}}className='bg-white rounded-lg'/> <p>Payment</p></div>
     <div className='p-5 flex space-x-5'><FaLanguage size={30} style={{color: 'green'}}className='bg-white rounded-lg'/> <p>change Language</p></div>
+    </div>
     </div>
     </div>
   )

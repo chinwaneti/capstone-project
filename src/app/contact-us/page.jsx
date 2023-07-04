@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { IoIosArrowBack, IoIosArrowUp } from 'react-icons/io';
 import { GrNext, GrLocation } from 'react-icons/gr';
-import { BiChevronDown, BiPhoneCall, BiTimeFive } from 'react-icons/bi';
+import { BiChevronDown, BiPhoneCall, BiTime, BiTimeFive } from 'react-icons/bi';
 import { BsGlobe2 } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 
@@ -139,10 +139,11 @@ export default function Page() {
   const [mine3, hisMine] = useState(false);
   const [mine4, heMine] = useState(false);
 
+
   return (
     <div className="border-solid rounded-lg bg-gray-50 mt-5">
       <div className="flex space-x-60">
-        <Link href="/categories">
+        <Link href="/newCategories">
           <IoIosArrowBack size={30} className="bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4" />
         </Link>
         <h2>Contact</h2>
@@ -156,74 +157,75 @@ export default function Page() {
           <GrLocation size={30} style={{ color: 'green' }} />
           <h1>Address</h1>
         </div>
-        <div className="fixed w-[46%]">
-          <button onClick={() => setMine((prev) => !prev)}>
-            {!mine ? <BiChevronDown size={30} /> : <IoIosArrowUp size={30} />}
+        <div className="ml-[40%] w-[46%]">
+          <button onClick={() => setMine((prev) => !prev)} className='ml-[80%]'>
+            {!mine ? <BiChevronDown size={30} style={{ color: 'green' }}/> : <IoIosArrowUp size={30} />}
           </button>
           {mine && (
-            <div className="mt-5 flex space-x-10 border-2 rounded-lg w-[90%] bg-gray-100">{list}</div>
+            <div className="mt-5 fixed left-9 flex space-x-10 border-2 rounded-lg w-[42%] bg-gray-100">{list}</div>
           )}
         </div>
       </div>
 
-      <div className="border-2 w-[90%] mx-auto font-bold flex justify-between mt-6 h-14 rounded-lg">
+      <div className="border-2 w-[90%] mx-auto font-bold flex justify-between mt-10 h-14 rounded-lg">
         <div className="flex space-x-4">
           <BiPhoneCall size={30} style={{ color: 'green' }} />
           <h1>Phone Number</h1>
         </div>
-        <div className="w-[46%] fixed">
-          <button onClick={() => sheMine((prev) => !prev)}>
-            {!mine1 ? <BiChevronDown size={30} /> : <IoIosArrowUp size={30} />}
+        <div className="w-[46%]  ml-[40%]">
+          <button onClick={() => sheMine((prev) => !prev)} className='ml-[80%]'>
+            {!mine1 ? <BiChevronDown size={30} style={{ color: 'green' }}/> : <IoIosArrowUp size={30} />}
           </button>
           {mine1 && (
-            <div className="w-[90%] mt-5 mr-8 flex space-x-10 bg-gray-100 rounded-lg border-2">{list1}</div>
+            <div className="w-[42%] fixed mt-5 left-9 flex space-x-10 bg-gray-100 rounded-lg border-2">{list1}</div>
           )}
         </div>
       </div>
 
-      <div className="border-2 w-[90%] mx-auto font-bold mt-6 h-14 rounded-lg">
+      <div className="border-2 w-[90%] mx-auto font-bold flex justify-between mt-10 h-14 rounded-lg">
         <div className="flex space-x-4">
           <BsGlobe2 size={30} style={{ color: 'green' }} />
           <h1>Website</h1>
         </div>
-        <div className="w-[46%] fixed">
-          <button onClick={() => herMine((prev) => !prev)}>
+        <div className="w-[46%] ml-[40%]">
+          <button onClick={() => herMine((prev) => !prev)}  className='ml-[80%]'>
             {!mine2 ? <BiChevronDown size={30} style={{ color: 'green' }} /> : <IoIosArrowUp size={30} />}
           </button>
           {mine2 && (
-            <div className="mt-5 mr-8 flex space-x-10 bg-gray-100 rounded-lg border-2">{list2}</div>
+            <div className="w-[42%] mt-5 fixed left-9 flex space-x-10 bg-gray-100 rounded-lg border-2">{list2}</div>
           )}
         </div>
       </div>
 
-      <div>
-        <div className="border-2 w-[90%] mx-auto font-bold mt-6 h-14 rounded-lg">
-          <h1>Time</h1>
-        </div>
-        <div className="w-[46%] fixed">
-          <button onClick={() => hisMine((prev) => !prev)}>
+        <div className="border-2 w-[90%] mx-auto font-bold flex justify-between mt-10 h-14 rounded-lg">
+            <div className='flex space-x-4'>
+            <BiTime size={30} style={{ color: 'green' }}/>
+            <h1>Time</h1>
+            </div>
+            <div className="w-[46%] ml-[40%]">
+            <button onClick={() => hisMine((prev) => !prev)}  className='ml-[80%]'>
             {!mine3 ? <BiChevronDown size={30} style={{ color: 'green' }} /> : <IoIosArrowUp size={30} />}
-          </button>
-        </div>
-        {mine3 && (
-          <div className="mr-8 flex w-[90%] mx-auto space-x-10 bg-gray-100 rounded-lg border-2">{list3}</div>
-        )}
-      </div>
+            </button>
+            {mine3 && (
+              <div className=" fixed flex w-[42%] mt-5 space-x-10 left-9 bg-gray-100 rounded-lg border-2">{list3}</div>
+              )}
+              </div>
+              </div>
 
-      <div className="border-2 w-[90%] mx-auto font-bold mt-6 h-14 rounded-lg">
+      <div className="border-2 w-[90%] mx-auto font-bold flex justify-between mt-10 h-14 rounded-lg">
         <div className="flex space-x-4">
           <AiOutlineMail size={30} style={{ color: 'green' }} />
           <h1>Email</h1>
         </div>
-        <div className="w-[46%] fixed">
-          <button onClick={() => heMine((prev) => !prev)}>
-            {!mine4 ? <BiChevronDown size={30} style={{ color: 'green' }} /> : <IoIosArrowUp size={30} />}
+        <div className="w-[46%] ml-[40%]">
+          <button onClick={() => heMine((prev) => !prev)} className='ml-[80%]'>
+            {!mine4 ? <BiChevronDown size={30} style={{ color: 'green' }}/> : <IoIosArrowUp size={30} />}
           </button>
           {mine4 && (
-            <div className="mt-5 mr-8 flex space-x-10 bg-gray-100 rounded-lg border-2">{list4}</div>
+            <div className="mt-5 left-9 fixed flex w-[42%] space-x-10 bg-gray-100 rounded-lg border-2">{list4}</div>
           )}
         </div>
       </div>
-    </div>
+      </div>
   );
 }

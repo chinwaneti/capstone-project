@@ -1,10 +1,13 @@
-"use client"
-import React, { useState } from "react";
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
+
+
 
 const products = [
   {
@@ -58,9 +61,7 @@ const products = [
   },
 ];
 
-const Page = () => {
-  const [cartVisibility, setCartVisible] = useState(false);
-  const [productsInCart, setProducts] = useState([]);
+export default function page() {
 
   const data = products.map((product) => (
     <section key={product.id} className="rounded-lg bg-gray-100 p-5 shadow-black">
@@ -70,12 +71,13 @@ const Page = () => {
       </div>
       <div>{product.name}</div>
       <div>{product.price}</div>
-      <div className="">{product.cart}</div>
+      <div className="" >{product.cart}</div>
     </section>
   ));
 
   return (
     <div className="bg-grey-50">
+    <div><Navbar /> </div>
       <div className="flex space-x-60">
         <Link href="/"><IoIosArrowBack size={30} className="bg-gray-100 ml-5 mb-4" /></Link>
         <h2 className="font-bold">Combo Deals</h2>
@@ -85,4 +87,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+

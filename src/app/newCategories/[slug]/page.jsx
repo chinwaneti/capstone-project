@@ -1,4 +1,5 @@
 "use client"
+import { useState, useEffect } from 'react';
 import React from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import Link from 'next/link';
@@ -13,8 +14,7 @@ function fetchCat(params) {
 export default function Page({ params }) {
   const cats = fetchCat(params);
 
-  
-  
+ 
 
   return (
     <div className='bg-gray-100 h-[160vh] rounded-lg border-2'>
@@ -39,12 +39,9 @@ export default function Page({ params }) {
                 {`$${item.price} /kg`}
               </div>
               <Image src={item.image} alt='Item' width={200} height={200} className='rounded-lg' />
-              <div
-                className='w-[70%] rounded-lg ml-1 mt-2 text-center text-white uppercase bg-green-500'
-                onClick={() => addToCartHandler(item.names)}
-              >
+<div className='w-[70%] rounded-lg ml-1 mt-2 text-center text-white uppercase bg-green-500'>
                 {/* Replace cats.cart with appropriate text */}
-                {cats.cart}
+               <div >{cats.cart}</div> 
               </div>
             </div>
           ))}
