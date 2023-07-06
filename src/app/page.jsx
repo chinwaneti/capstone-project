@@ -48,7 +48,7 @@ const data1 = details.map(detail=>(
     
 export default function Page() {
   return (
-    <div className='border-solid border-2 mt-5 border-gray-100 rounded-lg bg-gray-100'>
+    <div className='border-solid border-2 mt-5 mb-14 border-gray-100 rounded-lg bg-gray-100'>
     <div><Navbar /> </div>
     <div className='mt-10'>
     <h2 className='text-center'>Location</h2>

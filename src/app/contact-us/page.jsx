@@ -141,7 +141,7 @@ export default function Page() {
 
 
   return (
-    <div className="border-solid rounded-lg bg-gray-50 mt-5">
+    <div className="border-solid rounded-lg bg-gray-50 mt-5 mb-5">
       <div className="flex space-x-60">
         <Link href="/newCategories">
           <IoIosArrowBack size={30} className="bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4" />

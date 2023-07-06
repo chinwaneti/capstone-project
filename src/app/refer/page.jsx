@@ -5,6 +5,8 @@ import { RxTriangleDown } from 'react-icons/rx'
 import {GiPartyPopper, GiPartyFlags} from 'react-icons/gi'
 import { BiCopy } from 'react-icons/bi'
 import { FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
+import Link from 'next/link'
+import { IoIosArrowBack } from 'react-icons/io'
 
 
 
@@ -12,8 +14,8 @@ export default function page() {
   return (
     <div>
     <div className=''>
-    <div className='flex space-x-[35%]'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
-    <h2 className='font-bold text-xl'>Popular Items</h2></div>
+    <div className='flex space-x-[35%] mb-10 z-50'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
+    <h2 className='font-bold text-xl'>Refer & Earn</h2></div>
     </div>
     <div className='h-[80vh]  bg-green-500 top-0 text-white rounded-b-3xl'> 
     <div className='h-10'></div>
@@ -34,14 +36,19 @@ export default function page() {
     <div className='text-center'><BiCopy className='ml-48 '/><h1 className=' '>Your referral code </h1>  <h1 className='font-bold text-xl'>   ABCDG123 </h1></div>
     </div>
     <h1 className=' mt-4 text-center font-bold'>share your referral code via</h1>
-    <div className='flex space-x-3 mt-5 justify-center'><div className='w-28 h-10 rounded-2xl  bg-purple-900'> <FaTelegramPlane style={{color: "yellow"}} size={20} className='mx-auto mt-2'/>  </div> <div className='w-28 h-10 rounded-2xl bg-purple-900' ><FaFacebookF style={{color: "yellow"}} size={20} className='mx-auto mt-2'/>  </div> <div className='w-28 h-10 rounded-2xl bg-purple-900'><BsWhatsapp style={{color: "yellow"}} size={20} className='mx-auto mt-2' />  </div></div>
+    <div className='flex space-x-3 mt-5 justify-center'><div className='w-28 h-10 rounded-2xl  bg-purple-900'>
+     <FaTelegramPlane style={{color: "yellow"}} size={20} className='mx-auto mt-2'/>  </div>
+      <div className='w-28 h-10 rounded-2xl bg-purple-900' >
+      <FaFacebookF style={{color: "yellow"}} size={20} className='mx-auto mt-2'/>  </div> 
+      <div className='w-28 h-10 rounded-2xl bg-purple-900'>
+      <BsWhatsapp style={{color: "yellow"}} size={20} className='mx-auto mt-2' />  </div></div>
     </div>
-    <div className='h-[30vh] bg-white'>
-    <div className='h-16'></div>
-    <div>
+    <div className='bg-white mb-5  -z-50 rounded-t-2xl'>
+    <div className='h-[30vh] '></div>
+    <div></div>
     <h1 className='font-bold '> Frequently Asked Questions</h1>
     
-    </div>
+    
     </div>
     </div>
   )

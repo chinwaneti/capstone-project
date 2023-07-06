@@ -227,7 +227,7 @@ const father =[
     
     
   return (
-    <div className='border-solid  border-2 bg-gray-200 '>
+    <div className='border-solid  border-2 bg-gray-200 mb-10'>
     <div className='flex space-x-60'>
     <Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
     <h2 className='font-bold'>Categories</h2>

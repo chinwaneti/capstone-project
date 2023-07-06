@@ -17,7 +17,7 @@ export default function Page({ params }) {
  
 
   return (
-    <div className='bg-gray-100 h-[160vh] rounded-lg border-2'>
+    <div className='bg-gray-100 h-[160vh] rounded-lg mb-10 border-2'>
       <div className='flex space-x-60'>
         <Link href='/newCategories'>
           <IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4' />
