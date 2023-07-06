@@ -14,7 +14,7 @@ export default function page() {
   return (
     <div>
     <div className=''>
-    <div className='flex space-x-[35%] mb-10 z-50'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
+    <div className='flex space-x-[35%]  z-50'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
     <h2 className='font-bold text-xl'>Refer & Earn</h2></div>
     </div>
     <div className='h-[80vh]  bg-green-500 top-0 text-white rounded-b-3xl'> 
@@ -26,8 +26,8 @@ export default function page() {
     <RxTriangleDown style={{color: "yellow"}} size={20} className='ml-[40%]'/>
     <GiPartyFlags style={{color: "yellow"}} size={20} className='ml-[40%]'/>
     </div>
-    <div className='mt-4 flex space-x-2'><BsCoin style={{color: "yellow"}} size={20} className='ml-[45%]'/> 
-    <h1 className='font-bold text-2xl '>100</h1></div>
+    <div> 
+    <h1 className='font-bold text-2xl text-center'>100</h1></div>
     <h1 className='text-center font-bold'>Loyality Points</h1>
     <div className='text-center mt-4'><h1>Your friend gets 100 Mma points on sign up 
    <br /> and you also get 100 Mma points too every time!!
@@ -43,10 +43,10 @@ export default function page() {
       <div className='w-28 h-10 rounded-2xl bg-purple-900'>
       <BsWhatsapp style={{color: "yellow"}} size={20} className='mx-auto mt-2' />  </div></div>
     </div>
-    <div className='bg-white mb-5  -z-50 rounded-t-2xl'>
-    <div className='h-[30vh] '></div>
+    <div className='bg-white mb-5  rounded-t-2xl'>
+    <div className='h-[20vh] '></div>
     <div></div>
-    <h1 className='font-bold '> Frequently Asked Questions</h1>
+   
     
     
     </div>

@@ -2,40 +2,40 @@
      
             {
                 "id": 101,
-                "name": "Account",
+                "name": "Account:",
                 "title": "How do I create an account?",
                 "content": "To create an account, click on the 'Sign Up' button on the homepage and fill out the required information."
             }
             ,
             {
                 "id": 102,
-                "name": "Login",
+                "name": "Login:",
             "title": "I forgot my password. What should I do?",
             "content": "If you forgot your password, go to the login page and click on 'Forgot Password.' Follow the instructions to reset your password."
           },
       
             {
                 "id": 201,
-                "name": "Ordering",
+                "name": "Ordering:",
                 "title": "How do I place an order?",
                 "content": "To place an order, browse through the products, add items to your cart, and proceed to checkout. Follow the steps to complete your order."
             },
             {
                 "id": 202,
-                "name": "Delivery",
+                "name": "Delivery:",
             "title": "What are the delivery options?",
             "content": "We offer standard delivery and express delivery. Standard delivery usually takes 2-3 days, while express delivery arrives within 24 hours."
           },
       {
         "id": 3,
-        "name": " Refunds",
+        "name": " Refunds:",
         "title": "How can I request a refund?",
         "content": "If you want to request a refund, please contact our customer support team with your order details. We will assist you with the refund process."
           },
     
       {
         "id": 4,
-        "name": "Payments",
+        "name": "Payments:",
          "title": "What payment methods do you accept?",
          "content": "We accept credit cards, debit cards, and online payment platforms such as PayPal and Stripe."
           }

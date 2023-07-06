@@ -33,7 +33,7 @@ export default function Navbar() {
     <div onClick={() => setNav ((prev) => !prev)} className=''> 
     <RxHamburgerMenu size={30} className='z-50 '/></div> 
     <div className={
-      Nav ? "fixed left-0 top-0 w-[30%] z-50 h-screen bg-green-500 overscroll-auto p-10 ease-in duration-1000" 
+      Nav ? "fixed left-0 top-0 md:w-[30%]  z-50 h-screen bg-green-500 overscroll-auto p-10 ease-in duration-1000" 
       :  "fixed  left-[-100%] top-100 p-0 ease-in duration-500  "  }>
       <div className='flex  overscroll-auto justify-end'>
       <div onClick={() => setNav ((prev) => !prev)}> <AiOutlineClose /></div>

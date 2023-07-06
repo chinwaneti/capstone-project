@@ -66,7 +66,7 @@ export default function Page() {
     
    
 
-       <div className='bg-gray-200 h-8 mb-3'><ul className='flex items-center space-x-[74%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
+       <div className='bg-gray-200 h-8 mb-3'><ul className='flex items-center md:space-x-[74%] space-x-[60%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
         <Link href='/categories'><li className='text-green-700 font-bold uppercase'>See all</li></Link>
        </ul></div>
     <div className='grid grid-cols-4 gap-2'>
@@ -77,7 +77,7 @@ export default function Page() {
     <div className=''>Fruits</div>
     <div className=''>Milk & Eggs</div>
      <div>Drinks</div></div>
-     <div className='h-8 mb-3 bg-gray-200'><ul className='flex items-center space-x-[80%] mt-8 mb-2'><li className='font-bold ml-3'>Deals</li>
+     <div className='h-8 mb-3 bg-gray-200'><ul className='flex items-center md:space-x-[80%] space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Deals</li>
     <Link href='/deals'> <li className='text-green-700 font-bold uppercase'>See all</li></Link>
      </ul></div>
      <div>
@@ -93,7 +93,7 @@ export default function Page() {
      </div>
      </div>
      </div>
-     <div className='h-8 mb-3 bg-gray-200'><ul className='flex items-center space-x-[70%] mt-8 mb-2'><li className='font-bold ml-3'>Popular Items</li>
+     <div className='h-8 mb-3 bg-gray-200'><ul className='flex items-center md:space-x-[70%] space-x-[55%] mt-8 mb-2'><li className='font-bold ml-3'>Popular Items</li>
      <Link href='/popular-items'><li className='text-green-700 font-bold uppercase'>See all</li></Link>
      </ul></div>
      <div className='grid grid-cols-3 gap-2'>

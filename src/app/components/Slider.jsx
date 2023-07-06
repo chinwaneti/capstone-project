@@ -27,10 +27,10 @@ export default function Slider({slides}) {
       >
       {slides.map((slide) =>(
       <SwiperSlide key={slide.image} className='h-52 '>
-          <Image src={slide.image} alt='pics' width={200} height={200} className='rounded-lg' title={`scroll left or right to see more popular items:  ${slide.name}`}/>
+          <Image src={slide.image} alt='pics' width={200} height={200} className='rounded-lg' title={`Fresh:  ${slide.name}`}/>
       <div className='font-bold mt-7 text-black  flex justify-between'> {slide.name}</div>
        <div className='text-green-700'>${slide.price}<span className='text-black'> /kg  </span></div>
-       <Link href='/cart'> <div className='w-[70%] rounded-lg ml-1 mt-2 text-center text-white uppercase bg-green-500'> {slide.icon}</div></Link>
+       <Link href='/'> <div className='md:w-[70%]  rounded-lg ml-1 mt-2 text-center text-white uppercase bg-green-500'> {slide.icon}</div></Link>
       </SwiperSlide>
 
     ))}

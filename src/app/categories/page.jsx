@@ -146,7 +146,7 @@ const father =[
   {
     'cca3': "joy",
     "id": 8,
-    "name": "Cleaning Stuff",
+    "name": "Cleaning",
     "image": "https://media.istockphoto.com/id/1413593078/photo/fabric-softener-bottes-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=QCxoYpcZfyZT-f11HZ31QK_nKPbcuxOMlDCPci35_pQ=",
     "price": 1.59,
     "cart": 'add to cart',
@@ -228,8 +228,8 @@ const father =[
     
   return (
     <div className='border-solid  border-2 bg-gray-200 mb-10'>
-    <div className='flex space-x-60'>
-    <Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
+    <div className='flex md:space-x-60 space-x-32'>
+    <Link href='/'><IoIosArrowBack size={30} className=' ml-5 mb-4'/></Link>
     <h2 className='font-bold'>Categories</h2>
     </div>
 

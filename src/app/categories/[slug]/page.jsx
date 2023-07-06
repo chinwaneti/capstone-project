@@ -16,20 +16,20 @@ export default function Page({ params }) {
  
 
   return (
-    <div className='bg-gray-100 h-[160vh] rounded-lg mb-10 border-2'>
-      <div className='flex space-x-60'>
+    <div className='bg-gray-100 h-[160vh]  rounded-lg mb-10 border-2 '>
+      <div className='flex md:space-x-60 space-x-36'>
         <Link href='/categories'>
           <IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4' />
         </Link>
         <h2 className='font-bold'>Details</h2>
       </div>
 
-      <div className='ml-[30%]'>
+      <div className='md:ml-[30%] ml-20'>
         <Image src={cats.image} alt='Category' width={300} height={300} className='rounded-lg' />
       </div>
 
       <div>
-        <div className='mt-5 gap-5 grid grid-cols-2 ml-[15%]'>
+        <div className='mt-5 gap-5 px-4 grid grid-cols-2 md:ml-[15%] '>
           {cats.items.map((item, index) => (
             <div key={index}>
               <span className='font-bold'>{`${item.names}  `}</span>

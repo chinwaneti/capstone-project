@@ -19,7 +19,7 @@ export default function page() {
   return (
     <div className='border-solid  border-2 mb-10 bg-gray-100 mt-5'>
     <div className=''>
-    <div className='flex space-x-[35%]'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
+    <div className='flex md:space-x-[35%] space-x-24'><Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4'/></Link>
     <h2 className='font-bold text-xl'>Popular Items</h2></div>
     </div>
     <div className='grid grid-cols-3 gap-3 mt-10'>{data}</div>

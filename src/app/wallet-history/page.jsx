@@ -47,19 +47,15 @@ const WalletHistoryPage = () => {
 
   return (
     <div className='bg-gray-100'>
-      <div className='flex space-x-64'>
+      <div className='flex md:space-x-64 space-x-32'>
         <Link href='/my-account'>
           <IoIosArrowBack
             size={30}
             className='bg-gray-100 ml-5 rounded-lg border-2 shadow-2xl shadow-black mb-4'
           />
         </Link>
-        <h2 className='font-bold'>Wallet</h2>
-        <button
-          className='bg-gray-100 mb-4 rounded-lg border-2'
-        >
-          <GrNext size={27} />
-        </button>
+        <h2 className='font-bold'>Wallet History</h2>
+       
       </div>
       <div className='rounded-lg bg-green-100 p-4 font-extrabold'>
         <div className='flex justify-between'>

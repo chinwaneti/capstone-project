@@ -45,24 +45,24 @@ export default function Page() {
 
   return (
     <div className="">
-      <div className='rounded-lg border-solid bg-gray-300 mt-10 mb-10'>
-        <div className='flex space-x-60'>
+      <div className='rounded-lg border-solid bg-gray-300  mb-10'>
+        <div className='flex md:space-x-60 space-x-40'>
           <Link href='/'>
             <IoIosArrowBack
               size={30}
-              className='bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4'
+              className='bg-gray-100  rounded-lg border-2 shadow-2xl shadow-black mb-4'
             />
           </Link>
           <h2 className='font-bold'>Account</h2>
         </div>
 
-        <div className='ml-[45%] mt-20'>
+        <div className='md:ml-[45%] ml-[40%] mt-20'>
           <Image src={pic} alt='picture' width={100} height={150} className='rounded-full border-solid border-2' />
         </div>
         <h1 className='font-bold text-center'>{isSubmitted ? name : ''}</h1>
         <div className='bg-green-700  rounded-t-2xl mt-20  text-white'>
           <div className='p-5'>
-            <p>Account Overview</p>
+            <p className='font-bold'>Account Overview</p>
           </div>
           <div className='p-5 flex space-x-5'>
             <div onClick={handleProfileClick} className='flex space-x-2 cursor-pointer'>
@@ -90,7 +90,7 @@ export default function Page() {
         </div>
     
     {showProfileForm && (
-      <div className='fixed inset-0 flex justify-center w-[47.5%] items-center bg-gray-800 bg-opacity-50'>
+      <div className='fixed inset-0 flex justify-center md:w-[47.5%] items-center bg-gray-800 bg-opacity-50'>
         <div className='bg-white p-8 rounded-lg'>
           <div className='flex justify-between mb-4'>
             <h2 className='text-center'>My Profile</h2>

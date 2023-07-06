@@ -104,9 +104,9 @@ export default function Page() {
     <div className="bg-grey-50">
       <div>
       </div>
-      <div className="flex space-x-60">
+      <div className="flex md:space-x-60 space-x-32">
         <Link href="/">
-          <IoIosArrowBack size={30} className="bg-gray-100 ml-5 mb-4" />
+          <IoIosArrowBack size={30} className=" md:ml-5 mb-4" />
         </Link>
         <h2 className="font-bold">Combo Deals</h2>
       </div>

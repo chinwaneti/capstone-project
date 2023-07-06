@@ -32,9 +32,9 @@ export default function Page() {
     <div>
       {filteredResult.length !== 0 ? (
         filteredResult.map((data) => (
-          <section key={data.id} className='flex justify-between p-4'>
-            <div>{data.name}</div>
-            <div>{data.title}</div>
+          <section key={data.id} className='flex flex-col justify-between p-4'>
+            <div >{data.name}</div>
+            <div >{data.title}</div>
             <div>{data.content}</div>
           </section>
         ))
@@ -46,8 +46,8 @@ export default function Page() {
     </div>
   );
   return (
-    <div className='bg-white border-2 rounded-xl mt-5'>
-    <div className='ml-[40%] mt-20'>
+    <div className='bg-white border-2 rounded-xl '>
+    <div className='ml-[40%] md:mt-20 mt-5'>
     <Image src={'https://media.istockphoto.com/id/177059056/vector/question-and-information-with-speech-bubbles.jpg?s=612x612&w=0&k=20&c=Umpkux3HpjduVw8usjaEmdBkUQfwovwvJcHKJfyOSf0='} alt='picture' width={150} height={50} className=''/>
     </div>
     <div className='mt-10  mx-auto'> <h1 className='text-center font-extrabold text-2xl'> How can we help <br /> you today? </h1> </div>
