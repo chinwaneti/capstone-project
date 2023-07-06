@@ -2,10 +2,10 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-
 import Slider from './components/Slider'
 import slides from './components/details.json'
 import Navbar from './components/Navbar'
+import { useState } from 'react'
 
 
 
@@ -47,9 +47,8 @@ const data1 = details.map(detail=>(
 ))
     
 export default function Page() {
-   
   return (
-    <div className='border-solid border-2 mt-5 border-gray-100 rounded-lg bg-gray-100 top-0'>
+    <div className='border-solid border-2 mt-5 border-gray-100 rounded-lg bg-gray-100'>
     <div><Navbar /> </div>
     <div className='mt-10'>
     <h2 className='text-center'>Location</h2>

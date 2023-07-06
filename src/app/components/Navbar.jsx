@@ -20,6 +20,7 @@ import Image from 'next/image'
 
 
 
+
 const mine = Orbitron({ subsets: ['latin'], weight: ['400']  })
 export default function Navbar() {
   const [Nav, setNav] = useState(false) ;
@@ -43,10 +44,10 @@ export default function Navbar() {
       <li> <Image src={pic} alt='mine' width={100} className='rounded-full border-2 hover:border-4'/></li>
       <li onClick={() => setNav(false)}  className='py-2'>Welcome Chidinma!</li>
       <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsCardChecklist />Your Last Choice</li>
-      <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions {} </li>
-      <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><IoIosPeople />Refer & earn</li>
-      <Link href=''> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
-      <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiHelpCircle />Help Center</li>
+      <Link href='/deals'><li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions </li></Link>
+     <Link href='/refer'><li onClick={() => setNav(false)} className='py-2 flex space-x-4'><IoIosPeople />Refer & earn</li></Link>
+      <Link href='/contact-us'> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
+     <Link href='/help'> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiHelpCircle />Help Center</li></Link>
       <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><FcRatings />Rate Us</li>
       <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsExclamationCircle />About Us</li>
       <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><LuLogOut />Logout</li>
@@ -66,7 +67,8 @@ export default function Navbar() {
       </div> 
       </form>
       </div></Link>
-        <li><AiOutlineShoppingCart size={30} style={{color: 'white'}}/> </li>
+        <div>
+        <AiOutlineShoppingCart size={30} style={{color: 'white'}} /> </div>
     </ul></nav>
     </div>
   )

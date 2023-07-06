@@ -16,9 +16,8 @@ export default function page() {
     <div>
     <div className='rounded-lg border-solid  bg-grey-50  mt-10'>
     <div className='flex space-x-60'>
-    <Link href='/contact-us'><IoIosArrowBack size={30} className='bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4'/></Link>
+    <Link href='/'><IoIosArrowBack size={30} className='bg-gray-100 ml-8 rounded-lg border-2 shadow-2xl shadow-black mb-4'/></Link>
     <h2 className='font-bold'>Account</h2>
-    <Link href='/wallet-history'><GrNext size={27} className='bg-gray-100 mr-5 mb-4 rounded-lg border-2'/></Link>
     </div>
 
     <div className='ml-[45%] mt-20 '>
