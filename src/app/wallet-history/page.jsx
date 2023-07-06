@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useState, useEffect } from 'react';
 import { TfiWallet } from 'react-icons/tfi';
@@ -5,20 +6,28 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { GrNext } from 'react-icons/gr';
 import Link from 'next/link';
 
-export default function Page() {
+const WalletHistoryPage = () => {
   const [balance, setBalance] = useState(() => {
-    const savedBalance = localStorage.getItem('balance');
-    return savedBalance ? parseFloat(savedBalance) : 500.0; // Initial wallet balance
+    if (typeof window !== 'undefined') {
+      const savedBalance = localStorage.getItem('balance');
+      return savedBalance ? parseFloat(savedBalance) : 500.0; // Initial wallet balance
+    }
+    return 500.0; // Fallback value for server-side rendering
   });
 
   const [transactions, setTransactions] = useState(() => {
-    const savedTransactions = localStorage.getItem('transactions');
-    return savedTransactions ? JSON.parse(savedTransactions) : [];
+    if (typeof window !== 'undefined') {
+      const savedTransactions = localStorage.getItem('transactions');
+      return savedTransactions ? JSON.parse(savedTransactions) : [];
+    }
+    return []; // Fallback value for server-side rendering
   });
 
   useEffect(() => {
-    localStorage.setItem('balance', balance.toFixed(2));
-    localStorage.setItem('transactions', JSON.stringify(transactions));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('balance', balance.toFixed(2));
+      localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
   }, [balance, transactions]);
 
   const addMoney = () => {
@@ -47,7 +56,6 @@ export default function Page() {
         </Link>
         <h2 className='font-bold'>Wallet</h2>
         <button
-          
           className='bg-gray-100 mb-4 rounded-lg border-2'
         >
           <GrNext size={27} />
@@ -76,7 +84,7 @@ export default function Page() {
                   transaction.amount >= 0 ? 'text-green-700' : 'text-red-700'
                 } font-bold`}
               >
-                {transaction.amount >= 0 ? '+' : '-'}$
+                {transaction.amount >= 0 ? '+': '-'}$
                 {Math.abs(transaction.amount).toFixed(2)}
               </span>
             </div>
@@ -89,4 +97,6 @@ export default function Page() {
       </div>
    </div>
   );
-}
+};
+
+export default WalletHistoryPage;
