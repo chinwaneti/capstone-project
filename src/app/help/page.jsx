@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import Link from 'next/link';
 
-export default function page() {
+export default function Page() {
     const [searchValue, setSearchValue] = useState('');
   const [filteredResult, setFilteredResult] = useState([]);
 
