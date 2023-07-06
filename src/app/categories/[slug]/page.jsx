@@ -1,5 +1,4 @@
 "use client"
-import { useState, useEffect } from 'react';
 import React from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import Link from 'next/link';
@@ -19,7 +18,7 @@ export default function Page({ params }) {
   return (
     <div className='bg-gray-100 h-[160vh] rounded-lg mb-10 border-2'>
       <div className='flex space-x-60'>
-        <Link href='/newCategories'>
+        <Link href='/categories'>
           <IoIosArrowBack size={30} className='bg-gray-100 ml-5 mb-4' />
         </Link>
         <h2 className='font-bold'>Details</h2>

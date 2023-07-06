@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { newDetails } from '../newCategories/page';
+import { newDetails } from '../categories/page';
 
 
 const Cart = () => {

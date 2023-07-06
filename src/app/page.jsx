@@ -40,7 +40,7 @@ const details = [
 
 const data1 = details.map(detail=>(
     <section key={detail.id} className='bg-white rounded-lg h-32 hover:shadow-xl hover:shadow-black w-4/5 p-0 mx-auto '>
-  <Link href='/newCategories'> <div> <Image src={detail.image} alt='pics' width={110} height={100} className='mx-auto mt-6'/>
+  <Link href='/categories'> <div> <Image src={detail.image} alt='pics' width={110} height={100} className='mx-auto mt-6'/>
     </div></Link>
     
     </section>
@@ -67,7 +67,7 @@ export default function Page() {
    
 
        <div className='bg-gray-200 h-8 mb-3'><ul className='flex items-center space-x-[74%] mt-8 mb-2'><li className='font-bold ml-3'>Categories</li>
-        <Link href='/newCategories'><li className='text-green-700 font-bold uppercase'>See all</li></Link>
+        <Link href='/categories'><li className='text-green-700 font-bold uppercase'>See all</li></Link>
        </ul></div>
     <div className='grid grid-cols-4 gap-2'>
     {data1}

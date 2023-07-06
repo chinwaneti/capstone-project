@@ -216,7 +216,7 @@ const father =[
   export default function page() {
   const data1 = father.map(cart=>(
     <section key={cart.cca3} className='h-40 w-4/5  rounded-lg  bg-white p-0 mx-auto'>
-    <Link href={`/newCategories/${cart.cca3}`} title={`click to see more ${cart.name}`}>
+    <Link href={`/categories/${cart.cca3}`} title={`click to see more ${cart.name}`}>
     <Image src={cart.image} alt='pics' width={100} height={80} className='mx-auto mt-6'/>
     <div className='ml-[10%]'>{cart.icon} </div>
     <div className='ml-[10%] mt-3 font-bold'>{cart.name} </div>
