@@ -1,6 +1,6 @@
 import React from 'react';
 import { TfiWallet } from 'react-icons/tfi';
-import { BsPerson } from 'react-icons/bs';
+import { BsPerson, BsDatabaseFillAdd } from 'react-icons/bs';
 import { AiOutlineHeart, AiOutlineHome } from 'react-icons/ai';
 import Link from 'next/link';
 
@@ -15,8 +15,13 @@ export default function Footer() {
           </div>
         </Link>
         <div className='hover:text-green-600'>
-          <AiOutlineHeart /> Wishlist
+        <AiOutlineHeart /> Wishlist
         </div>
+        <Link href='/add-money'>
+          <div className='hover:text-green-600'>
+            <BsDatabaseFillAdd />Add-Money
+          </div>
+        </Link>
         <Link href='/wallet-history'>
           <div className='hover:text-green-600'>
             <TfiWallet />Wallet

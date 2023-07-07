@@ -54,7 +54,7 @@ export default function Page() {
     <div className='mx-auto mt-8'><p className='text-center'>Enter your details to proceed further, <br /> enter more details about your bio</p></div>
     <div className='h-[30%]'></div>
     <div className='mt-16'>
-    <form action='' className='w-full '>
+    <form action='' className='md:w-full w-[80%] ml-[14%] md:ml-0'>
     <div className='relative ml-3 flex items-center text-gray-400 focus-within:text-gray-600'>
       <BsSearch
         size={20}
@@ -63,13 +63,13 @@ export default function Page() {
         type='search'
         name='cap'
         autoComplete='off'
-        aria-label='Search food, drinks etc'
-        placeholder='Search food, drinks etc'
-        className='pr-3 pl-10 h-10 py-2 font-semibold mb-2 cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 w-full'
+        aria-label='How Can Mma Help?'
+        placeholder='How Can We Help You?'
+        className='pr-3 pl-10 h-10 py-2 font-semibold mb-2 cursor-text placeholder-gray-500 text-black rounded-lg border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:right-2 md:w-full w-[90%] px-14'
         onChange={(e) => text(e.target.value)}/>
     </div>
     <div>
-      <Link href='/'>
+      <Link href=''>
         <div className='bg-green-500 left-[68px] ml-2 border-2   w-[100%] rounded-xl hover:text-white overflow-auto'>
           {searchValue.length > 1 ? (
             filteredResult.length !== 0 ? (

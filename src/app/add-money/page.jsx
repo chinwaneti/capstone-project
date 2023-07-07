@@ -32,7 +32,7 @@ export default function Page() {
   };
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-200'>
       <div className='h-[20vh]'></div>
       <div className='bg-green-100 w-[90%] ml-[6%]'>
         <p>Wallet Balance</p>
