@@ -5,7 +5,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoIosArrowBack } from "react-icons/io";
 import { GrFavorite } from "react-icons/gr";
 import { useState, useEffect } from "react";
-import Page from "../cart/page";
 
 export let CartExport;
 
@@ -101,7 +100,7 @@ export default function DealPage() {
     setTimeout(() => {
       setShowItemAdded(false);
     }, 2000);
-    return; // Do not add again
+    return; 
   }
 
   const updatedCart = [...cart, item];
@@ -139,13 +138,12 @@ export default function DealPage() {
   ));
 
   return (
-    <div className="bg-grey-50">
+    <div className="bg-grey-50 p-5">
       <div>
-        {/* Cart icon */}
         
       </div>
-      <div className="flex md:space-x-60 space-x-32">
-        {/* Back button */}
+      <div className="flex md:space-x-60 space-x-48">
+       
         <Link href="/">
           <IoIosArrowBack size={30} className="md:ml-5 mb-4" />
         </Link>

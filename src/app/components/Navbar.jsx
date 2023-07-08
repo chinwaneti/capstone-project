@@ -67,8 +67,8 @@ export default function Navbar() {
       </div> 
       </form>
       </div></Link>
-        <div>
-        <AiOutlineShoppingCart size={30} style={{color: 'white'}} /> </div>
+        
+       <Link href='/cart'><div><AiOutlineShoppingCart size={30} style={{color: 'white'}} /> </div></Link> 
     </ul></nav>
     </div>
   )
