@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div className={mine.className} >
-    <nav className='bg-green-600 top-0 fixed md:w-[47.4%] w-[100%]'><ul className='flex justify-between px-5 items-center h-14'>
+    <nav className='bg-green-600 top-0 fixed md:w-[52%] w-[100%]'><ul className='flex justify-between px-5 items-center h-14'>
     <li>
     <div onClick={() => setNav ((prev) => !prev)} className=''> 
     <RxHamburgerMenu size={30} className='z-50 '/></div> 
