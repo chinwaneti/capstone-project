@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div className={mine.className} >
-    <nav className='bg-green-600 top-0 fixed md:w-[52%] w-[100%]'><ul className='flex justify-between px-5 items-center h-14'>
+    <nav className='bg-green-600 top-0 fixed md:w-[47.5%] w-[100%]'><ul className='flex justify-between px-5 items-center h-14'>
     <li>
     <div onClick={() => setNav ((prev) => !prev)} className=''> 
     <RxHamburgerMenu size={30} className='z-50 '/></div> 
@@ -43,7 +43,7 @@ export default function Navbar() {
       <ul>
       <li> <Image src={pic} alt='mine' width={100} className='rounded-full border-2 hover:border-4'/></li>
       <li onClick={() => setNav(false)}  className='py-2'>Welcome Chidinma!</li>
-      <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsCardChecklist />Your Last Choice</li>
+      <Link href='/cart'><li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BsCardChecklist />Your Last Choice</li></Link>
       <Link href='/deals'><li onClick={() => setNav(false)} className='py-2 flex space-x-4'><MdOutlineLocalOffer />Offer & Promotions </li></Link>
      <Link href='/refer'><li onClick={() => setNav(false)} className='py-2 flex space-x-4'><IoIosPeople />Refer & earn</li></Link>
       <Link href='/contact-us'> <li onClick={() => setNav(false)} className='py-2 flex space-x-4'><BiPhoneCall />Contact Us</li></Link>
